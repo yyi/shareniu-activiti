@@ -1,13 +1,16 @@
 package com.shareniu.chapter8;
+/*
 
 import org.activiti.engine.cfg.ProcessEngineConfigurator;
 import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
+*/
 /**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
- */
+ *//*
+
 public class ShareniuProcessEngineConfigurator implements ProcessEngineConfigurator  {
 	ShareniuStandaloneProcessEngineConfiguration a;
 	ShareniuProcessDefinitionInfoCache cache;
@@ -33,3 +36,4 @@ public class ShareniuProcessEngineConfigurator implements ProcessEngineConfigura
 		return 0;
 	}
 }
+*/

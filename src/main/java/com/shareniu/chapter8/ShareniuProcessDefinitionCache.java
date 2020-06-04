@@ -1,6 +1,6 @@
 package com.shareniu.chapter8;
 
-import java.io.ByteArrayInputStream;
+/*import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -9,14 +9,14 @@ import java.io.ObjectOutputStream;
 import org.activiti.engine.impl.persistence.deploy.DeploymentCache;
 import org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity;
 
-import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Jedis;*/
 /**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
  */
-public class ShareniuProcessDefinitionCache implements
+/*public class ShareniuProcessDefinitionCache implements
 		DeploymentCache<ProcessDefinitionEntity> {
 	// 实例化Jedis实例 ip:端口
 	Jedis jedis = new Jedis("127.0.0.1", 6379);
@@ -80,4 +80,4 @@ public class ShareniuProcessDefinitionCache implements
 		}
 		return obj;
 	}
-}
+}*/

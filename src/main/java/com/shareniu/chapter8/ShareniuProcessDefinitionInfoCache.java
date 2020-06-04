@@ -7,16 +7,16 @@ import org.activiti.engine.impl.interceptor.CommandExecutor;
 import org.activiti.engine.impl.persistence.deploy.ProcessDefinitionInfoCache;
 import org.activiti.engine.impl.persistence.deploy.ProcessDefinitionInfoCacheObject;
 
-import redis.clients.jedis.Jedis;
+/*import redis.clients.jedis.Jedis;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-/**
+*//**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
- */
+ *//*
 public class ShareniuProcessDefinitionInfoCache extends ProcessDefinitionInfoCache {
 	public static class ProcessDefinitionInfoCacheObjectVo   implements Serializable {
 		protected String id;	//id
@@ -24,19 +24,19 @@ public class ShareniuProcessDefinitionInfoCache extends ProcessDefinitionInfoCac
 		 // 因为需要序列化，ProcessDefinitionInfoCacheObjec类中的infoNode类型为ObjectNode,而ObjectNode没有实现序列化接口，所以需要对象与String
 		  //之间相互进行转换
 		  protected String infoNode;
-		  
+
 		  public String getId() {
 		    return id;
 		  }
-		  
+
 		  public void setId(String id) {
 		    this.id = id;
 		  }
-		  
+
 		  public int getRevision() {
 		    return revision;
 		  }
-		  
+
 		  public void setRevision(int revision) {
 		    this.revision = revision;
 		  }
@@ -54,7 +54,7 @@ public class ShareniuProcessDefinitionInfoCache extends ProcessDefinitionInfoCac
 			return "ProcessDefinitionInfoCacheObjectVo [id=" + id
 					+ ", revision=" + revision + ", infoNode=" + infoNode + "]";
 		}
-		
+
 	}
 	protected CommandExecutor commandExecutor;
 	public void setCommandExecutor(CommandExecutor commandExecutor) {
@@ -140,7 +140,7 @@ public class ShareniuProcessDefinitionInfoCache extends ProcessDefinitionInfoCac
 		super(commandExecutor);
 	}
 
-/*	public ProcessDefinitionInfoCacheObject get(
+*//*	public ProcessDefinitionInfoCacheObject get(
 			final String processDefinitionId, String id) {
 		ProcessDefinitionInfoCacheObject infoCacheObject = null;
 
@@ -187,5 +187,5 @@ public class ShareniuProcessDefinitionInfoCache extends ProcessDefinitionInfoCac
 				});
 
 		return infoCacheObject;
-	}*/
-}
+	}*//*
+}*/
