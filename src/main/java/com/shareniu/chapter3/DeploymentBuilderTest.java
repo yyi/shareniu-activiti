@@ -45,7 +45,7 @@ import org.junit.Before;
 import org.junit.Test;
 /**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
  */
@@ -107,7 +107,9 @@ public class DeploymentBuilderTest {
 
 	@Test
 	public void activateProcessDefinitionById() {
-		repositoryService.activateProcessDefinitionById("myProcess:13:37504",
+//		repositoryService.suspendProcessDefinitionById("leave-countersign:4:40009",
+//				true, null);
+		repositoryService.activateProcessDefinitionById("leave-countersign:4:40009",
 				true, null);
 
 	}
@@ -147,7 +149,7 @@ public class DeploymentBuilderTest {
 		Deployment deploy = deploymentBuilder.deploy();
 	}
 
-	
+
 
 	@Test
 	public void testConvertToXML() throws Exception {
@@ -363,7 +365,7 @@ public class DeploymentBuilderTest {
 
 	/**
 	 * 根据文件的路径获取文件中的内容
-	 * 
+	 *
 	 * @param filePath
 	 * @return
 	 */

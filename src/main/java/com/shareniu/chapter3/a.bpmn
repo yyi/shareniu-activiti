@@ -6,19 +6,19 @@
 	typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
 	targetNamespace="http://www.activiti.org/test">
 	<process id="myProcess" name="My process" isExecutable="true">
-	
+
 		<extensionElements>
-		
+
 			<activiti:executionListener event="start"
 				class="com.shareniu.chapter4.ShareniuListener"></activiti:executionListener>
-				
+
 			<activiti:field name="shareniu">
 				<activiti:string><![CDATA[shareniuName]]></activiti:string>
 			</activiti:field>
-			
-			
+
+
 		</extensionElements>
-		<documentation>分享牛</documentation>
+<!--		<documentation>分享牛</documentation>-->
 		<startEvent id="startevent1" name="Start"></startEvent>
 		<userTask id="usertask1" name="User Task"></userTask>
 		<sequenceFlow id="flow1" name="flow1" sourceRef="startevent1"
