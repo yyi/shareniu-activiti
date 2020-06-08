@@ -24,7 +24,7 @@ public class ShareniuDelegateInterceptor implements DelegateInterceptor {
 		//执行的目标类
 		Object target = invocation.getTarget();
 		if (target instanceof TaskListener) {
-
+			invocation.proceed();
 		}else {
 			//可以根据自己的业务对执行的监听类进行控制，如果不期望目标执行则不调用proceed函数即可
 			invocation.proceed();

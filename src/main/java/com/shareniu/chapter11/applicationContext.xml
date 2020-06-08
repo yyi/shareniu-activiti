@@ -36,7 +36,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="databaseSchemaUpdate" value="true"/>
         <property name="transactionManager" ref="transactionManager"/>
-<!--        <property name="delegateInterceptor" ref="shareniuDelegateInterceptor"/>  屏蔽这句否则全局监听器不起作用-->
+        <property name="delegateInterceptor" ref="shareniuDelegateInterceptor"/>
         <property name="customDefaultBpmnParseHandlers">
             <list>
                 <bean class="com.shareniu.chapter11.ShareniuUserTaskParserHandler"/>
