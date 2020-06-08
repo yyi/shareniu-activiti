@@ -3,12 +3,15 @@ package com.shareniu.chapter11;
 import org.activiti.engine.delegate.TaskListener;
 import org.activiti.engine.impl.delegate.DelegateInvocation;
 import org.activiti.engine.impl.interceptor.DelegateInterceptor;
+import org.springframework.stereotype.Component;
+
 /**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
  */
+@Component("shareniuDelegateInterceptor")
 public class ShareniuDelegateInterceptor implements DelegateInterceptor {
 
 	@Override
@@ -21,7 +24,7 @@ public class ShareniuDelegateInterceptor implements DelegateInterceptor {
 		//执行的目标类
 		Object target = invocation.getTarget();
 		if (target instanceof TaskListener) {
-			
+
 		}else {
 			//可以根据自己的业务对执行的监听类进行控制，如果不期望目标执行则不调用proceed函数即可
 			invocation.proceed();

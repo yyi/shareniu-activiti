@@ -2,9 +2,9 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
   <process id="myProcess" name="My process" isExecutable="true">
     <extensionElements>
-      <activiti:executionListener event="start" class="com.shareniu.activiti.learing.ch14.listener.ExecutionListener1"></activiti:executionListener>
+      <activiti:executionListener event="start" class="com.shareniu.chapter11.ExecutionListener1"></activiti:executionListener>
       <activiti:executionListener event="start" delegateExpression="${a}"></activiti:executionListener>
-      <activiti:executionListener event="start" class="com.shareniu.activiti.learing.ch14.listener.ExecutionListener2"></activiti:executionListener>
+      <activiti:executionListener event="start" class="com.shareniu.chapter11.ExecutionListener2"></activiti:executionListener>
       <activiti:executionListener event="start" expression="${bean.doSomething(execution)}"></activiti:executionListener>
       <activiti:executionListener event="start" expression="${bean}"></activiti:executionListener>
       <activiti:executionListener event="start" expression="${bean.doSomething1(person,'b',cc)}"></activiti:executionListener>

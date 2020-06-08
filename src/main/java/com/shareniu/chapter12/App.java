@@ -22,7 +22,7 @@ import org.junit.Before;
 import org.junit.Test;
 /**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
  */
@@ -62,23 +62,23 @@ public class App {
 				return null;
 			}
 		});
-		
+
 	}
 	@Test
 	public void startProcessInstanceById() {
 		Map<String, Object> map=new HashMap<String, Object>();
-		runtimeService.startProcessInstanceById("myProcess:1:4",map);
+		runtimeService.startProcessInstanceById("myProcess:1:67504",map);
 	}
 	@Test
 	public void complete() {
 		Map<String, Object> variables=new HashMap<String, Object>();
 		variables.put("s", "s");
 		variables.put("s1", "s1");
-		String taskId="2504";
+		String taskId="70004";
 		taskService.complete(taskId, variables);
 	}
-	
+
 }
-	
-	
-	
+
+
+

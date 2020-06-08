@@ -9,7 +9,7 @@ import org.activiti.engine.impl.bpmn.parser.handler.UserTaskParseHandler;
 import org.activiti.engine.impl.task.TaskDefinition;
 /**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
  */
@@ -23,9 +23,11 @@ public class ShareniuUserTaskParserHandler  extends UserTaskParseHandler{
         activitiListener.setEvent(TaskListener.EVENTNAME_CREATE);
         activitiListener.setImplementationType(ImplementationType.IMPLEMENTATION_TYPE_DELEGATEEXPRESSION);
         activitiListener.setImplementation("#{shareniuTaskListener}");
-        taskDefinition
-                .addTaskListener(TaskListener.EVENTNAME_CREATE, bpmnParse
-                        .getListenerFactory()
-                        .createDelegateExpressionTaskListener(activitiListener));
+
+        taskDefinition.addTaskListener(activitiListener.getEvent(), createTaskListener(bpmnParse, activitiListener, userTask.getId()));
+//        taskDefinition
+//                .addTaskListener(TaskListener.EVENTNAME_CREATE, bpmnParse
+//                        .getListenerFactory()
+//                        .createDelegateExpressionTaskListener(activitiListener));
 	}
 }
