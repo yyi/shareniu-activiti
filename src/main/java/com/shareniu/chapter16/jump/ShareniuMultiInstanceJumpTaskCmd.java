@@ -24,7 +24,7 @@ public class ShareniuMultiInstanceJumpTaskCmd implements Command<Void> {
 				.getCommandContext().getExecutionEntityManager();
 		ExecutionEntity executionEntity = executionEntityManager
 				.findExecutionById(executionId);
-		String id = null;
+		String id = parentId;
 		if (executionEntity.getParent() != null) {
 			executionEntity = executionEntity.getParent();
 			if (executionEntity.getParent() != null) {
@@ -81,7 +81,7 @@ public class ShareniuMultiInstanceJumpTaskCmd implements Command<Void> {
 	/**
 	 * 构造参数 可以根据自己的业务需要添加更多的字段 分享牛原创(尊重原创
 	 * 转载对的时候第一行请注明，转载出处来自分享牛http://blog.csdn.net/qq_30739519)
-	 * 
+	 *
 	 * @param executionId
 	 * @param desActivity
 	 * @param paramvar
@@ -95,6 +95,6 @@ public class ShareniuMultiInstanceJumpTaskCmd implements Command<Void> {
 		this.desActivity = desActivity;
 		this.paramvar = paramvar;
 		this.currentActivity = currentActivity;
-		
+
 	}
 }

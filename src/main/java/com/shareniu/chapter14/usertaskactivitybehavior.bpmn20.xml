@@ -5,7 +5,7 @@
 	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
 	xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema"
 	expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-	<process id="extensionUserTask" name="ext" isExecutable="true">
+	<process id="extensionUserTask" name="测试自定义字段流程" isExecutable="true">
 		<startEvent id="start" name="Start"></startEvent>
 		<userTask id="usertask1" name="usertask1" shareniu:autoUse="true"
 			shareniu:userId="shareniu1,shareniu2"></userTask>

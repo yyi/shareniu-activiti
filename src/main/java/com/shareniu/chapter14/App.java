@@ -22,7 +22,7 @@ import org.junit.Test;
 import com.shareniu.chapter3.DeploymentBuilderTest;
 /**
  *  Activiti权威指南书配套代码
- *  
+ *
  * @author shareniu 分享牛 http://www.shareniu.com/
  *
  */
@@ -62,7 +62,7 @@ public class App {
 				.getResource("com/shareniu/chapter14/activitybehavior.bpmn20.xml").openStream();*/
 		//usertaskactivitybehavior.bpmn20.xml
 		InputStream inputStream = DeploymentBuilderTest.class.getClassLoader()
-				.getResource("com/shareniu/chapter14/callactivity.bpmn").openStream();
+				.getResource("com/shareniu/chapter14/usertaskactivitybehavior.bpmn20.xml").openStream();
 		// 流程定义的分类
 		String category = "shareniu_addInputStream";
 		// 构造DeploymentBuilder对象
@@ -76,7 +76,7 @@ public class App {
 	}
 	@Test
 	public void startProcessInstanceById() {
-		runtimeService.startProcessInstanceById("extensionUserTask:2:62504");
+		runtimeService.startProcessInstanceById("extensionUserTask:1:185004");
 	}
 	@Test
 	public void startProcessInstanceByIdskipExpression() {
@@ -94,7 +94,7 @@ public class App {
 	@Test
 	public void testtaskService() throws IOException {
 		taskService.complete("333");
-		
+
 	}
-	
+
 }

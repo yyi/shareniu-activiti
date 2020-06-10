@@ -62,45 +62,45 @@ public class VariabletypeTest {
 		//部署
 		Deployment deploy = deploymentBuilder.deploy();
 		System.out.println(deploy);
-		
+
 	}
-	@Test  
-	public void complete() {  
-	    // 与任务相关的service,正在执行的service  
-	    TaskService taskService = processEngine.getTaskService();  
-	  
-	    // 任务ID  
-	    String taskId = "7547";  
+	@Test
+	public void complete() {
+	    // 与任务相关的service,正在执行的service
+	    TaskService taskService = processEngine.getTaskService();
+
+	    // 任务ID
+	    String taskId = "7547";
 	    Map<String, Object> variables=new HashMap<>();
 	    variables.put("a", false);
 	  taskService.complete(taskId,variables);
-	  
-	}  
-	@Test  
-	public void setVariables() {  
-	    // 与任务相关的service,正在执行的service  
-	    TaskService taskService = processEngine.getTaskService();  
-	  
-	    // 任务ID  
-	    String taskId = "37510";  
-	  
+
+	}
+	@Test
+	public void setVariables() {
+	    // 与任务相关的service,正在执行的service
+	    TaskService taskService = processEngine.getTaskService();
+
+	    // 任务ID
+	    String taskId = "37510";
+
 	    Map<String, Object> variables=new HashMap<>();
 	    variables.put("a", "a");
 	    //variables.put("b", "b");
-		// 1.设置流程变量，使用基本数据类型  
+		// 1.设置流程变量，使用基本数据类型
 	    taskService.setVariables(taskId, variables);
-	   //taskService.setVariableLocal(taskId, "a", "1");  
-	      
-	    System.out.println("设置流程变量成功！");  
-	  
-	}  
+	   //taskService.setVariableLocal(taskId, "a", "1");
+
+	    System.out.println("设置流程变量成功！");
+
+	}
 	@Test
 	public void startProcessInstanceById(){
 		Map<String, Object> variables=new HashMap<String, Object>();
-		variables.put("shareniu", new Shareniu("1", "shareniu1",18));
-		ProcessInstance startProcessInstanceById = runtimeService.startProcessInstanceById("subprocess:1:4",variables);
+		variables.put("shareniu111", new Shareniu("1", "shareniu1",18));
+		ProcessInstance startProcessInstanceById = runtimeService.startProcessInstanceById("skipExpression:1:160004",variables);
 		System.out.println(startProcessInstanceById);
-		
+
 	}
 	@Test
 	public void fixSerializedVariables(){
@@ -118,6 +118,6 @@ public class VariabletypeTest {
 	            }
 		 }
 	}
-	
-	
+
+
 }
