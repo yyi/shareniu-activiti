@@ -32,6 +32,7 @@ public class TaskListener implements org.activiti.engine.delegate.TaskListener {
 			Collection<String> candidateUsers = new ArrayList<>();
 			candidateUsers.add(val);
 			delegateTask.addCandidateUsers(candidateUsers);// 属性值作为当前任务的处理人
+
 		}
 	}
 

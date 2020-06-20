@@ -76,14 +76,14 @@ public class App {
 		eventDispatcher.addEventListener(listener);
 		//移除事件监听器
 		//eventDispatcher.removeEventListener(listener1);
-		runtimeService.startProcessInstanceById("myProcess:1:4",map);
+		runtimeService.startProcessInstanceById("myProcess:1:2504",map);
 	}
 	@Test
 	public void complete() {
 		Map<String, Object> variables=new HashMap<String, Object>();
 		variables.put("s", "s");
 		variables.put("s1", "s1");
-		String taskId="2504";
+		String taskId="5004";
 		taskService.complete(taskId, variables);
 	}
 	

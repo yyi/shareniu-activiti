@@ -89,7 +89,7 @@ public class ExtensionOperationProcessTest {
 		InputStream inputStream = DeploymentBuilderTest.class
 				.getClassLoader()
 				.getResourceAsStream(
-						"com/shareniu/activiti/learing/ch6/listener.bpmn20.xml");
+						"com/shareniu/chapter10/listener.bpmn20.xml");
 		// 流程定义的分类
 		String category = "shareniu_addInputStream";
 		// 构造DeploymentBuilder对象
@@ -108,7 +108,7 @@ public class ExtensionOperationProcessTest {
 		InputStream inputStream = DeploymentBuilderTest.class
 				.getClassLoader()
 				.getResourceAsStream(
-						"com/shareniu/activiti/learing/ch6/multiInstanceLoopCharacteristics.bpmn20.xml");
+						"com/shareniu/chapter10/multiInstanceLoopCharacteristics.bpmn20.xml");
 		// 流程定义的分类
 		String category = "shareniu_addInputStream";
 		// 构造DeploymentBuilder对象
@@ -124,12 +124,12 @@ public class ExtensionOperationProcessTest {
 	@Test
 	public void startProcessInstanceById() {
 		runtimeService
-				.startProcessInstanceById("extensionOperationProcess:2:62504");
+				.startProcessInstanceById("extensionOperationProcess:2:30003");
 	}
 
 	@Test
 	public void pvm1() {
-		String processDefinitionId = "extensionOperationProcess:1:3";
+		String processDefinitionId = "extensionOperationProcess:2:30003";
 		ProcessEngineConfigurationImpl pec = (ProcessEngineConfigurationImpl) processEngine.getProcessEngineConfiguration();
 		DeploymentManager deploymentManager = pec.getDeploymentManager();
 		DeploymentCache<ProcessDefinitionEntity> processDefinitionCache = deploymentManager.getProcessDefinitionCache();
@@ -160,7 +160,7 @@ public class ExtensionOperationProcessTest {
 	}
 	@Test
 	public void SimpleContext() {
-		String processDefinitionId="extensionOperationProcess:6:92503";
+		String processDefinitionId="extensionOperationProcess:2:30003";
 		ProcessDefinitionEntity pdf = (ProcessDefinitionEntity) repositoryService.getProcessDefinition(processDefinitionId);
 		List<ActivityImpl> activities = pdf.getActivities();
 		for (ActivityImpl activityImpl : activities) {
@@ -180,7 +180,7 @@ public class ExtensionOperationProcessTest {
 	}
 	@Test
 	public void findActivities() {
-		String processDefinitionId = "extensionOperationProcess:1:3";
+		String processDefinitionId = "extensionOperationProcess:2:30003";
 		ProcessDefinitionEntity pdf = (ProcessDefinitionEntity) repositoryService
 				.getProcessDefinition(processDefinitionId);
 		List<ActivityImpl> activities = pdf.getActivities();

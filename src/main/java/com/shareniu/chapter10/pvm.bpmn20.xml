@@ -10,7 +10,11 @@
     </userTask>
     <sequenceFlow id="flow4" sourceRef="startevent1" targetRef="operationTask"></sequenceFlow>
     <userTask id="usertask2" name="usertask2"></userTask>
-    <sequenceFlow id="flow5" sourceRef="operationTask" targetRef="usertask2"></sequenceFlow>
+    <sequenceFlow id="flow5" sourceRef="operationTask" targetRef="usertask2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[
+        ${shareniu>=100}
+      ]]></conditionExpression>
+    </sequenceFlow>
     <endEvent id="endevent1" name="End"></endEvent>
     <sequenceFlow id="flow6" sourceRef="operationTask" targetRef="endevent1"></sequenceFlow>
   </process>

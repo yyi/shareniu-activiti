@@ -4,13 +4,13 @@
   <message id="payment" name="paymentMessage"></message>
   <process id="operationProcess" name="process" isExecutable="true">
     <extensionElements>
-      <activiti:executionListener event="start" class="com.shareniu.activiti.learing.ch6.MyExecutionListener">
+      <activiti:executionListener event="start" class="com.shareniu.chapter10.MyExecutionListener">
       <activiti:field  name="a" expression="" stringValue="">
        <activiti:string>aaaaaa</activiti:string>
        <activiti:expression>ss</activiti:expression>
       </activiti:field>
       </activiti:executionListener>
-      <activiti:executionListener event="start" class="com.shareniu.activiti.learing.ch6.MyExecutionListener2"></activiti:executionListener>
+      <activiti:executionListener event="start" class="com.shareniu.chapter10.MyExecutionListener2"></activiti:executionListener>
     </extensionElements>
     <userTask id="usertask1" name="User Task"></userTask>
     <endEvent id="endevent2" name="End"></endEvent>
