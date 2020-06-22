@@ -78,7 +78,8 @@ public class App {
     public void startProcessInstanceById() {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("_ACTIVITI_SKIP_EXPRESSION_ENABLED", true);
-        runtimeService.createProcessInstanceBuilder().processDefinitionId("skipExpression:1:160004").businessKey("test ").variables(map).name("测试流程").start();
+
+        runtimeService.createProcessInstanceBuilder().processDefinitionKey("skipExpression").businessKey("test ").variables(map).transientVariable("skip_this","dumb").name("测试流程").start();
 //		ProcessInstance processInstance=runtimeService.startProcessInstanceById("skipExpression:1:160004", map);
 //		runtimeService.setProcessInstanceName(processInstance.getProcessInstanceId(),"测试流程");
     }

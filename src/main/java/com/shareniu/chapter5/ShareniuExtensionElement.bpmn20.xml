@@ -13,7 +13,12 @@
 			shareniu:id="shareniuId" shareniu:name="shareniuName">
 			<extensionElements>
 				<shareniu:shareniuOperations>
-					<shareniu:transfer transferTo="shareniu"></shareniu:transfer>
+					<shareniu:transfer transferTo="shareniu">
+						<shareniu:appends test="abc">
+							<shareniu:append app="1"></shareniu:append>
+							<shareniu:append app="2"></shareniu:append>
+						</shareniu:appends>
+					</shareniu:transfer>
 					<shareniu:goback backTo="startevent1"></shareniu:goback>
 					<shareniu:text>shareniu</shareniu:text>
 				</shareniu:shareniuOperations>
